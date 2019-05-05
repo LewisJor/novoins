@@ -18,7 +18,7 @@ class RequestForm extends Component {
   sendEmail = () => {
     const { email } = this.state;
     fetch(
-      `http://127.0.0.1:4000/send-email?recipient=${email.recipient}&sender=${
+      `http://www.novoins.com/send-email?recipient=${email.recipient}&sender=${
         email.sender
       }&topic=${email.subject}&text= Hi my name is ${email.firstname} ${
         email.lastname
