@@ -1,0 +1,223 @@
+.header-color {
+  background: #2980b9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2980b9,
+    #6dd5fa,
+    #2980b9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2980b9,
+    #6dd5fa,
+    #2980b9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* Landing page CSS */
+.landing-grid {
+  overflow-y: auto;
+  background: #2980b9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2980b9,
+    #6dd5fa,
+    #2980b9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2980b9,
+    #6dd5fa,
+    #2980b9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.pickNovoCell {
+  width: 75%;
+  margin: auto;
+}
+.pickNovoCell ul {
+  text-align: left;
+  list-style-type: circle;
+}
+.pickNovoCell li {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.displayInsuranceCell {
+  width: 75%;
+  margin: auto;
+}
+.logo-img {
+  height: 250px;
+  padding-top: 5em;
+}
+
+.banner-text {
+  background-color: black;
+  opacity: 0.8;
+  width: 75%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.banner-text h1 {
+  font-size: 66px;
+  font-weight: bold;
+  color: white;
+}
+
+.banner-text hr {
+  border-top: 5px dotted white;
+  width: 50%;
+  margin: auto;
+}
+
+.banner-text p {
+  color: white;
+  font-size: 28px;
+  padding: 1em;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+}
+
+.social-links i {
+  color: white;
+  font-size: 5em;
+  padding: 8px;
+}
+
+#myHeader {
+  text-decoration: none;
+  color: white;
+}
+
+#myHeaderDrawer {
+  text-decoration: none;
+  color: gray;
+}
+/*Contact Me CSS*/
+.contact-body {
+  margin: auto;
+  position: fluid;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding-top: 2em;
+  background: #1c92d2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fff,
+    #6dd5fa,
+    #fff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fff, #6dd5fa, #fff);
+}
+
+.contact-grid {
+  text-align: center;
+  justify-content: center;
+  width: 80%;
+  height: 90%;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.contact-grid h2 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.contact-grid p {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.contact-grid hr {
+  border-top: 5px thin black;
+  width: 75%;
+  margin: auto;
+}
+
+.contact-list i {
+  font-size: 50px;
+  padding-right: 5rem;
+}
+
+.contact-list #addressI {
+  font-size: 50px;
+  padding-right: 4rem;
+}
+
+#jChavezPhoto {
+  border-radius: 25px;
+}
+
+/*Insurance CSS*/
+.projects-grid {
+  display: flex;
+  margin-top: 2em;
+}
+
+/* fonts font-family: "Roboto Condensed", sans-serif; */
+
+/* requestForm CSS*/
+.formStyled {
+  display: flex;
+  justify-content: auto;
+  width: 45%;
+}
+
+.form-body {
+  margin: auto;
+  position: fluid;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding-top: 2em;
+  background: #1c92d2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fff,
+    #6dd5fa,
+    #fff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #fff,
+    #6dd5fa,
+    #fff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.insurance-body {
+  margin: auto;
+  position: fluid;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding-top: 2em;
+  background: #1c92d2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fff,
+    #6dd5fa,
+    #fff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fff, #6dd5fa, #fff);
+}
+
+#novoLogo {
+  width: 350px;
+  height: 400px;
+}
