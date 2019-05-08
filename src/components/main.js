@@ -2,7 +2,6 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import LandingPage from "./landingpage";
-import AboutMe from "./aboutMe";
 import Insurance from "./insurance";
 import Contact from "./contact";
 import RequestForm from "./requestForm";

@@ -17,27 +17,55 @@ class RequestForm extends Component {
   };
 
   sendEmail = () => {
-    const { email } = this.state;
-    fetch(
-      `https://novoinsmailing.herokuapp.com/send-email?recipient=${
-        email.recipient
-      }&sender=${email.sender}&topic=${email.subject}&text= Hi my name is ${
-        email.firstname
-      } ${email.lastname} I am interested in learning more about your ${
-        email.insurancetype
-      } options. Additional Information: ${email.message}. My phone number is ${
-        email.phonenumber
-      }. Thank you, ${email.firstname}`
-    ) //query string url
-      .catch(err => console.error(err));
+    //const { email } = this.state;
+    //sendgridMail(email);
   };
 
+  sendgridMail = () => {
+    const { email } = this.state;
+
+    const str = String;
+    var helper = require("sendgrid").mail;
+    var from_email = email.sender;
+    var to_email = email.recipient;
+    var subject = email.subject;
+    var content = str.concat(
+      "Hi my name is ",
+      email.firstname,
+      " ",
+      email.lastname,
+      " I am insterested in learning more about your ",
+      email.insurancetype,
+      " My phone number is ",
+      email.phonenumber,
+      " Additional Information",
+      email.message,
+      " Thank you",
+      email.firstname
+    );
+    var mail = new helper.Mail(from_email, subject, to_email, content);
+
+    var sg = require("sendgrid")(
+      "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"
+    );
+    var request = sg.emptyRequest({
+      method: "POST",
+      path: "/v3/mail/send",
+      body: mail.toJSON()
+    });
+
+    sg.API(request, function(error, response) {
+      console.log(response.statusCode);
+      console.log(response.body);
+      console.log(response.headers);
+    });
+  };
   render() {
     const { email } = this.state;
     return (
       <div className="form-body">
         <Grid>
-          <Form className="formStyled" onSubmit={this.sendEmail}>
+          <Form className="formStyled" onSubmit={this.sendgridMail}>
             <h2 style={{ textAlign: "center" }}>Connect with us!</h2>
             <hr />
             <Form.Row>
@@ -142,4 +170,5 @@ class RequestForm extends Component {
     );
   }
 }
+
 export default RequestForm;

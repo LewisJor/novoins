@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Grid, Cell } from "react-mdl";
-import { Carousel, Jumbotron, Container } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
 
 class LandingPage extends Component {
   constructor(props, context) {
