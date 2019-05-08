@@ -27,7 +27,7 @@ class App extends Component {
                 <h6>Request Information</h6>
               </Link>
               <Link to="/contact">
-                <h6>Contact Us</h6>
+                <h6>About Us</h6>
               </Link>
               <div
                 style={{ marginTop: "45px" }}
@@ -45,7 +45,7 @@ class App extends Component {
             <Navigation>
               <Link to="/insurance">Insurance Carriers</Link>
               <Link to="/requestForm">Request Information</Link>
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/contact">About Us</Link>
             </Navigation>
           </Drawer>
           <Content>

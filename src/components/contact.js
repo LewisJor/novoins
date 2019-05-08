@@ -5,7 +5,7 @@ class Contact extends Component {
     return (
       <div className="contact-body">
         <Grid className="contact-grid">
-          <Cell col={6}>
+          <Cell col={7}>
             <h2>Jim Chavez</h2>
             <img
               id="jChavezPhoto"
@@ -13,16 +13,42 @@ class Contact extends Component {
               alt="JimChavez"
               style={{ height: "300px" }}
             />
-            <p style={{ width: "75%", margin: "auto", paddingTop: "1em" }}>
-              It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+            <p style={{ width: "100%", margin: "auto", paddingTop: "1em" }}>
+              <ul style={{ fontSize: "19px" }}>
+                {" "}
+                About Jim Chavez
+                <hr />
+                <li>
+                  Jim owns Novo Insurance Agency LLC and is our resident home
+                  and car insurance expert. A teacher at heart, he simplifies
+                  the insurance experience by giving step by step guidance along
+                  the way. He grew up in Platteville, WI and is a native of
+                  Lima, Peru.
+                </li>
+                <br />
+                <li>
+                  Before Novo Ins, he was a bilingual casualty adjuster and a
+                  claims manager at American Family Insurance, helping countless
+                  customers with professionalism, compassion and expertise to
+                  each claim, committed to delivering a superior customer
+                  experience.
+                </li>
+                <br />
+                <li>
+                  Jim is a graduate of Marian University of Wisconsin and served
+                  as a youth soccer coach before joining the insurance industry.
+                  He continues to practice service learning and servant
+                  leadership.
+                </li>
+                <br />
+                <li>
+                  Jim is now pursuing the new Certified Personal Risk Manager
+                  (CPRM) designation to further serve his insurance clients.
+                </li>
+              </ul>
             </p>
           </Cell>
-          <Cell col={6}>
+          <Cell col={5}>
             <h2>Contact Me</h2>
             <hr />
             <List className="contact-list">
@@ -31,6 +57,12 @@ class Contact extends Component {
                   style={{ fontSize: "30px", fontFamily: "Roboto Condensed" }}
                 >
                   <i class="fas fa-phone-square" aria-hidden="true" />
+                </ListItemContent>
+              </ListItem>
+              <ListItem>
+                <ListItemContent
+                  style={{ fontSize: "30px", fontFamily: "Roboto Condensed" }}
+                >
                   (608) 956-8988
                 </ListItemContent>
               </ListItem>
@@ -39,7 +71,13 @@ class Contact extends Component {
                   style={{ fontSize: "30px", fontFamily: "Roboto Condensed" }}
                 >
                   <i class="fas fa-envelope-square" aria-hidden="true" />
-                  NovoInsurance@gmail.com
+                </ListItemContent>
+              </ListItem>
+              <ListItem>
+                <ListItemContent
+                  style={{ fontSize: "30px", fontFamily: "Roboto Condensed" }}
+                >
+                  InsuranceNovo@gmail.com
                 </ListItemContent>
               </ListItem>
               <ListItem>
@@ -47,10 +85,33 @@ class Contact extends Component {
                   style={{ fontSize: "30px", fontFamily: "Roboto Condensed" }}
                 >
                   <i id="addressI" class="fas fa-address-card" />
+                </ListItemContent>
+              </ListItem>
+              <ListItem>
+                <ListItemContent
+                  style={{ fontSize: "30px", fontFamily: "Roboto Condensed" }}
+                >
                   100 State St, Madison WI, 53716
-                </ListItemContent>{" "}
+                </ListItemContent>
               </ListItem>
             </List>
+          </Cell>
+        </Grid>
+        <Grid className="additionalInfo">
+          <Cell col={10}>
+            <p>
+              After years of participating on the sidelines of the independent
+              insurance world, he decided it was time to change the way people
+              feel about insurance. Jumping in feet first, he and his wife
+              founded Novo Insurance Agency and have been happily running a
+              couples’ owned small business since. Need an insurance guide? Jim
+              has carried his claims management expertise and teaching skills
+              over to help you understand how to protect yourself. Most days Jim
+              can be found helping folks with their insurance needs. In his free
+              time he enjoys spending time with his family (wife and young son),
+              attending Wisconsin sporting events and playing sports. You just
+              found an insurance advisor whose passion is teaching!
+            </p>
           </Cell>
         </Grid>
       </div>

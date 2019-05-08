@@ -10,7 +10,6 @@ import RequestForm from "./requestForm";
 const Main = () => (
   <Switch>
     <Route exact path="/" component={LandingPage} />
-    <Route path="/aboutMe" component={AboutMe} />
     <Route path="/insurance" component={Insurance} />
     <Route path="/contact" component={Contact} />
     <Route path="/requestForm" component={RequestForm} />

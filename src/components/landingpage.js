@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Grid, Cell } from "react-mdl";
-import { Carousel } from "react-bootstrap";
+import { Carousel, Jumbotron, Container } from "react-bootstrap";
 
 class LandingPage extends Component {
   constructor(props, context) {
@@ -68,8 +68,10 @@ class LandingPage extends Component {
           </Cell>
           <Cell col={6}>
             <div className="pickNovoCell">
-              <h4 style={{ fontWeight: "Bold" }}>
-                Why should you let novo help?
+              <h4
+                style={{ fontWeight: "Bold", fontFamily: "Roboto Condensed" }}
+              >
+                Why should you let Novo help?
               </h4>
               <hr style={{ borderTop: "3px dotted white" }} />
               <ul>
@@ -89,7 +91,9 @@ class LandingPage extends Component {
           </Cell>
           <Cell col={6}>
             <div className="displayInsuranceCell">
-              <h4 style={{ fontWeight: "Bold" }}>
+              <h4
+                style={{ fontWeight: "Bold", fontFamily: "Roboto Condensed" }}
+              >
                 Companies that we have relationships with!
               </h4>
               <hr style={{ borderTop: "3px dotted white" }} />
@@ -148,6 +152,31 @@ class LandingPage extends Component {
                   />
                 </Carousel.Item>
               </Carousel>
+            </div>
+          </Cell>
+          <Cell col={12}>
+            <div className="jumboInfo">
+              <h3>More reasons to love Novo!</h3>
+              <ul>
+                <li>
+                  Our company is fluent in three languages English, Spanish and
+                  Portuguese.
+                </li>
+                <br />
+                <li>
+                  Our company loves helping people and insurance is a great
+                  vehicle for that. Our favorite parts of work are sharing and
+                  connecting with others, not only about insurance but also
+                  about living our best lives.
+                </li>
+                <br />
+                <li>
+                  We are a licensed independent adjuster and has earned the
+                  Associate in Claims (AIC) designations which are nationally
+                  recognized as important credentials for insurance agents,
+                  benefiting his agency and clients.
+                </li>
+              </ul>
             </div>
           </Cell>
         </Grid>

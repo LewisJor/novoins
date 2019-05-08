@@ -11,7 +11,8 @@ class RequestForm extends Component {
       lastname: "",
       insurancetype: "",
       subject: "Request for Insurance Information",
-      message: ""
+      message: "",
+      phonenumber: ""
     }
   };
 
@@ -24,9 +25,9 @@ class RequestForm extends Component {
         email.firstname
       } ${email.lastname} I am interested in learning more about your ${
         email.insurancetype
-      } options. Additional Information: ${email.message} Thank you, ${
-        email.firstname
-      }`
+      } options. Additional Information: ${email.message}. My phone number is ${
+        email.phonenumber
+      }. Thank you, ${email.firstname}`
     ) //query string url
       .catch(err => console.error(err));
   };
@@ -35,25 +36,42 @@ class RequestForm extends Component {
     const { email } = this.state;
     return (
       <div className="form-body">
-        <Grid className="formStyled">
-          <Form onSubmit={this.sendEmail}>
-            <h2> Interested? Send us an Email</h2>
+        <Grid>
+          <Form className="formStyled" onSubmit={this.sendEmail}>
+            <h2 style={{ textAlign: "center" }}>Connect with us!</h2>
             <hr />
+            <Form.Row>
+              <Form.Group as={Col} controlId="formEmail">
+                <Form.Label>Email Address</Form.Label>
+                <Form.Control
+                  type="email"
+                  value={email.sender}
+                  onChange={e =>
+                    this.setState({
+                      email: { ...email, sender: e.target.value }
+                    })
+                  }
+                  placeholder="Enter Email"
+                />
+                <Form.Text className="text-bold">
+                  We'll never share your email with anyone else.
+                </Form.Text>
+              </Form.Group>
+              <Form.Group as={Col} controlId="formPhoneNumber">
+                <Form.Label>Phone Number</Form.Label>
+                <Form.Control
+                  type="phonenumber"
+                  value={email.phonenumber}
+                  onChange={e =>
+                    this.setState({
+                      email: { ...email, phonenumber: e.target.value }
+                    })
+                  }
+                  placeholder="Enter Phone number (xxx)-xxx-xxxx"
+                />
+              </Form.Group>
+            </Form.Row>
 
-            <Form.Group controlId="formEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
-                type="email"
-                value={email.sender}
-                onChange={e =>
-                  this.setState({ email: { ...email, sender: e.target.value } })
-                }
-                placeholder="Enter email"
-              />
-              <Form.Text className="text-bold">
-                We'll never share your email with anyone else.
-              </Form.Text>
-            </Form.Group>
             <Form.Row>
               <Form.Group as={Col} controlId="formFirstName">
                 <Form.Label>First Name</Form.Label>
@@ -115,7 +133,7 @@ class RequestForm extends Component {
               </Form.Group>
             </Form.Row>
 
-            <Button variant="secondary" type="submit" value="Submit">
+            <Button variant="primary" type="submit" value="Submit">
               Send your request!
             </Button>
           </Form>
