@@ -17,45 +17,19 @@ class RequestForm extends Component {
   };
 
   sendEmail = () => {
-    //const { email } = this.state;
-    //sendgridMail(email);
-  };
-
-  sendgridMail = () => {
     const { email } = this.state;
-
-    var helper = require("sendgrid").mail;
-    var from_email = email.sender;
-    var to_email = email.recipient;
-    var subject = email.subject;
-    var content =
-      "Hi my name is " +
-      email.firstname +
-      " " +
-      email.lastname +
-      " I am insterested in learning more about your " +
-      email.insurancetype +
-      " My phone number is " +
-      email.phonenumber +
-      " Additional Information" +
-      email.message +
-      " Thank you" +
-      email.firstname;
-    var mail = new helper.Mail(from_email, subject, to_email, content);
-
-    var sg = require("sendgrid")(process.env.SENDGRID_API_KEY);
-
-    var request = sg.emptyRequest({
-      method: "POST",
-      path: "/v3/mail/send",
-      body: mail.toJSON()
-    });
-
-    sg.API(request, function(error, response) {
-      console.log(response.statusCode);
-      console.log(response.body);
-      console.log(response.headers);
-    });
+    fetch(
+      `https://novoinsmailing.herokuapp.com/send-email?recipient=${
+        email.recipient
+      }&sender=${email.sender}&topic=${email.subject}&text= Hi my name is ${
+        email.firstname
+      } ${email.lastname} I am interested in learning more about your ${
+        email.insurancetype
+      } options. Additional Information: ${email.message}. My phone number is ${
+        email.phonenumber
+      }. Thank you, ${email.firstname}`
+    ) //query string url
+      .catch(err => console.error(err));
   };
 
   render() {
@@ -159,7 +133,7 @@ class RequestForm extends Component {
               </Form.Group>
             </Form.Row>
 
-            <Button variant="primary" onClick={this.sendgridMail}>
+            <Button variant="primary" onClick={this.sendEmail}>
               Send your request!
             </Button>
           </Form>
@@ -168,5 +142,4 @@ class RequestForm extends Component {
     );
   }
 }
-
 export default RequestForm;
