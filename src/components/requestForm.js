@@ -45,9 +45,8 @@ class RequestForm extends Component {
     );
     var mail = new helper.Mail(from_email, subject, to_email, content);
 
-    var sg = require("sendgrid")(
-      "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"
-    );
+    var sg = require("sendgrid")(process.env.SENDGRID_API_KEY);
+
     var request = sg.emptyRequest({
       method: "POST",
       path: "/v3/mail/send",
