@@ -24,25 +24,23 @@ class RequestForm extends Component {
   sendgridMail = () => {
     const { email } = this.state;
 
-    const str = String;
     var helper = require("sendgrid").mail;
     var from_email = email.sender;
     var to_email = email.recipient;
     var subject = email.subject;
-    var content = str.concat(
-      "Hi my name is ",
-      email.firstname,
-      " ",
-      email.lastname,
-      " I am insterested in learning more about your ",
-      email.insurancetype,
-      " My phone number is ",
-      email.phonenumber,
-      " Additional Information",
-      email.message,
-      " Thank you",
-      email.firstname
-    );
+    var content =
+      "Hi my name is " +
+      email.firstname +
+      " " +
+      email.lastname +
+      " I am insterested in learning more about your " +
+      email.insurancetype +
+      " My phone number is " +
+      email.phonenumber +
+      " Additional Information" +
+      email.message +
+      " Thank you" +
+      email.firstname;
     var mail = new helper.Mail(from_email, subject, to_email, content);
 
     var sg = require("sendgrid")(process.env.SENDGRID_API_KEY);
@@ -59,12 +57,13 @@ class RequestForm extends Component {
       console.log(response.headers);
     });
   };
+
   render() {
     const { email } = this.state;
     return (
       <div className="form-body">
         <Grid>
-          <Form className="formStyled" onSubmit={this.sendgridMail}>
+          <Form className="formStyled">
             <h2 style={{ textAlign: "center" }}>Connect with us!</h2>
             <hr />
             <Form.Row>
@@ -160,7 +159,7 @@ class RequestForm extends Component {
               </Form.Group>
             </Form.Row>
 
-            <Button variant="primary" type="submit" value="Submit">
+            <Button variant="primary" onClick={this.sendgridMail}>
               Send your request!
             </Button>
           </Form>
