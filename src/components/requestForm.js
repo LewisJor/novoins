@@ -18,11 +18,11 @@ class RequestForm extends Component {
   sendEmail = () => {
     const { email } = this.state;
     fetch(
-      `http://www.novoins.com/send-email?recipient=${email.recipient}&sender=${
-        email.sender
-      }&topic=${email.subject}&text= Hi my name is ${email.firstname} ${
-        email.lastname
-      } I am interested in learning more about your ${
+      `https://novoinsmailing.herokuapp.com/send-email?recipient=${
+        email.recipient
+      }&sender=${email.sender}&topic=${email.subject}&text= Hi my name is ${
+        email.firstname
+      } ${email.lastname} I am interested in learning more about your ${
         email.insurancetype
       } options. Additional Information: ${email.message} Thank you, ${
         email.firstname

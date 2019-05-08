@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@sendgrid/mail": "^6.3.1",
     "bootstrap": "^4.3.1",
-    "concurrently": "^4.1.0",
-    "cors": "^2.8.5",
     "node": "^12.1.0",
     "package.json": "^2.0.1",
     "react": "^16.8.6",
@@ -14,12 +11,10 @@
     "react-dom": "^16.8.6",
     "react-mdl": "^1.11.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8",
-    "sendgrid": "^5.2.3",
-    "superagent": "^5.0.2"
+    "react-scripts": "2.1.8"
   },
   "scripts": {
-    "start": "react-scripts start nodemon index.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
